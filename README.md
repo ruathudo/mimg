@@ -2,10 +2,17 @@
 Multimodal interactive music generator
 
 
+## Setup development
+- Install UV python dependencies management: https://docs.astral.sh/uv/
+- Install python version using UV as set in .python-version file
+- Install dependencies: `uv pip install -r requirements.txt`
+- Export dependencies to requirements.txt format: `uv pip compile pyproject.toml -o requirements.txt`
+
 ### Setup server development
-- Install python dependencies: `pipenv install`
+- Install python dependencies: `uv install`
 - Activate python env: `pipenv shell`
-- Go to server folder and run: `uvicorn main:app --port 8000 --reload`
+- Run fastapi server: `uvicorn server.main:app --port 8000 --reload`
+- 
 
 
 ### Setup client development
